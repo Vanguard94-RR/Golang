@@ -1,0 +1,28 @@
+{
+  "session": {
+    "name": "Golang Training Environment - AI Agent",
+    "createdAt": "2026-02-19",
+    "language": "es",
+    "guidelines": {
+      "documentation": "no crear sin solicitud explícita",
+      "responseStyle": "conciso y directo",
+      "maxResponseLength": "3-4 líneas máximo para respuestas simples",
+      "avoidUnnecessaryExplanations": true,
+      "noEmojis": true,
+      "actionOriented": true
+    },
+    "projectStructure": {
+      "trainingNotes": "GO-Training-Notes.md",
+      "coursePath": "Go-Udemy-Course",
+      "projectsPath": "Projects",
+      "configPath": ".vscode",
+      "docsPath": "docs"
+    },
+    "agentBehavior": {
+      "implementChanges": true,
+      "exploreContextAsNeeded": true,
+      "parallelizeTools": true,
+      "confirmBeforeBreakingChanges": true
+    }
+  }
+}

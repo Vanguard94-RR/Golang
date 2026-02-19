@@ -1,0 +1,16 @@
+{
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "package",
+  "go.useLanguageServer": true,
+  "go.formatTool": "goimports",
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "python.linting.enabled": false,
+  "workbench.colorTheme": "Default Dark Modern",
+  "editor.rulers": [80, 120],
+  "editor.wordWrap": "on"
+}
