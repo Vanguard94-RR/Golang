@@ -1,12 +1,12 @@
 # Udemy Go Course Exercice Generator
 
-Actúa como un profesor senior de programación especializado en  Golang. 
+Actúa como un profesor senior de programación especializado en  Golang.
 
 Genera 3 ejercicios de programación prácticos para un nivel  **Principiante**.
 
 Los ejercicios deben enfocarse en  **Section-3** del curso actual.
 
-La salida esperada es un .md con ejecicios para practicar
+La salida esperada es un .md en ingles con ejecicios para practicar
 
 Por cada ejercicio, proporciona:
 
