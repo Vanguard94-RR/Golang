@@ -1,0 +1,37 @@
+package examples
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}	fmt.Println("\n=== End Examples ===\n")	fmt.Println("Got back:", formatted)	formatted := formatter.Format("Reusable String")	formatter := New().WithColor(Cyan)	fmt.Println("\n5. Returned String (no auto-print):")	// Example 5: Get formatted string without printing		Print("Multiple Styles")		WithItalic(true).		WithBold(true).		WithColor(Red).	New().	fmt.Println("\n4. Bold + Italic + Red:")	// Example 4: Combination	New().WithPadChar("=").WithColor(Yellow).Print("Equals Sign Padding")	fmt.Println("\n3. Custom Padding (=):")	// Example 3: Different padding character	New().WithWidth(60).WithColor(Blue).Print("Smaller Width")	fmt.Println("\n2. Custom Width (60):")	// Example 2: Custom width	New().WithColor(Green).WithBold(true).Print("Welcome to Terminal Formatter")	fmt.Println("1. Default Title:")	// Example 1: Default formatter	fmt.Println("\n=== Terminal Formatter Examples ===\n")func main() {import "fmt"package main

@@ -12,51 +12,6 @@ import (
 	"fmt"
 )
 
-const (
-	Reset     = "\033[0m"
-	Bold      = "\033[1m"
-	Italic    = "\x1b[3m"
-	Underline = "\033[4m"
-	Red       = "\033[31m"
-	Green     = "\033[32m"
-	Blue      = "\033[34m"
-	Yellow    = "\033[33m"
-	Blink     = "\x1b[5m"
-	Inverse   = "\x1b[7m"
-	Gray      = "\x1b[37m"
-	DarkGray  = "\x1b[30;1m"
-)
-
-func Tittle(text string) {
-	leftDashes := (78 - len(text)) / 2
-	rightDashes := 78 - len(text) - leftDashes
-
-	left := ""
-	for i := 0; i < leftDashes; i++ {
-		left += "-"
-	}
-	right := ""
-	for i := 0; i < rightDashes; i++ {
-		right += "-"
-	}
-	fmt.Println(Bold + left + Green + Italic + text + Reset + Bold + right + Reset)
-}
-
-func subTittle(text string) {
-	leftDashes := (78 - len(text)) / 2
-	rightDashes := 78 - len(text) - leftDashes
-
-	left := ""
-	for i := 0; i < leftDashes; i++ {
-		left += "-"
-	}
-	right := ""
-	for i := 0; i < rightDashes; i++ {
-		right += "-"
-	}
-	fmt.Println(left + DarkGray + text + Reset + right)
-}
-
 type walker interface {
 	walk(p point) error
 	getPosition() point
@@ -109,6 +64,8 @@ func move(w walker, points []point) error {
 }
 
 func interfaces() {
+	PrintTitle("Interfaces Example")
+
 	Juan := &human{}
 
 	steps := []point{
@@ -116,18 +73,23 @@ func interfaces() {
 		point{x: 3, y: 4},
 		point{x: 4, y: 6},
 	}
+
+	PrintSubTitle("Moving Juan through points")
 	err := move(Juan, steps)
 	if err != nil {
-		fmt.Println("Error moving:", err)
+		PrintError("Error moving: " + err.Error())
 	} else {
-		fmt.Println("Final position of Juan:", Juan.getPosition())
+		PrintSuccess("Final position of Juan: " + fmt.Sprintf("%v", Juan.getPosition()))
 	}
 
 	Juan.talk("Hello, I am Juan!")
 }
 
 func main() {
-	Tittle("Interfaces in Go")
-	subTittle("Defining and Implementing Interfaces")
+	PrintTitle("Interfaces in Go")
+	PrintSubTitle("Defining and Implementing Interfaces")
+
 	interfaces()
+
+	PrintRoundBox("Demonstration Complete!")
 }
